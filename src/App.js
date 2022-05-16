@@ -18,11 +18,13 @@ import Review from './shared/Review/Review';
 import LeaveAReview from './shared/Review/LeaveAReview';
 import Directions from './shared/Directions/Directions';
 import Contact from './shared/Contact/Contact';
+import LoadingSpinner from './shared/LoadingSpinner/LoadingSpinner';
+
 function App() {
   return (
     <BrowserRouter>
-      <Announce />
-      <Header />
+      <Announce /> 
+       <Header /> 
       <Switch>
         <Route exact path="/">
           <Redirect to="/home" />
@@ -31,6 +33,7 @@ function App() {
           <About />
         </Route>
         <Route exact path="/home">
+          {/* <LoadingSpinner/> */}
           <Home />
         </Route>
         <Route exact path="/services">
